@@ -1,0 +1,91 @@
+@background: #383838;
+@text-title: lighten(@background, 60%);
+@text-subtitle: lighten(@background, 30%);
+@text-body: lighten(@background, 75%);
+@link: #56e1ff;
+@link-on-hover: #90f046;
+
+@footer-height: 35px;
+
+@font-face {
+  font-family: 'raleway-thin';
+  src: url('fonts/raleway_thin-webfont.eot');
+  src: url('fonts/raleway_thin-webfont.woff') format('woff'),
+       url('fonts/raleway_thin-webfont.ttf') format('truetype'),
+       url('fonts/raleway_thin-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text (@size: 1.35em) {
+  font: normal @size 'raleway-thin', monospace;
+  text-align: left;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  .text;
+  background-color: @background;
+  color: @text-body;
+  margin: 0px 30px 0 20px;
+}
+
+#title, #content, #error_page {
+  width: 830px;
+}
+
+#error_page {
+  padding: 6px 0 0 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2 {
+  padding: 10px 0 4px 0;
+}
+
+h1{ 
+  .text(300%);
+  color: @text-title;
+}
+
+h2 {
+  .text(160%);
+  color: @text-subtitle;
+}
+
+p { 
+  line-height: 1.5em;
+  padding: 0 0 10px 0;
+}
+
+a {
+  color: @link;
+  text-decoration: none;
+}
+
+a:hover { 
+  color: @link-on-hover;
+  text-decoration: underline;
+}
+
+#container {
+   min-height: 100%;
+   position: relative;
+}
+
+#footer {
+   .text(70%);
+   position: absolute;
+   bottom: 0;
+   padding: 8px 0 0 12px;
+   width: 100%;
+   height: @footer-height;
+   background: darken(@background, 3%);
+}
