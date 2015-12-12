@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:200);
+
 @background: #383838;
 @text-title: lighten(@background, 60%);
 @text-subtitle: lighten(@background, 30%);
@@ -5,20 +7,16 @@
 @link: #56e1ff;
 @link-on-hover: #90f046;
 
-@footer-height: 35px;
+@footer-height: 40px;
 
 @font-face {
-  font-family: 'raleway-thin';
-  src: url('fonts/raleway_thin-webfont.eot');
-  src: url('fonts/raleway_thin-webfont.woff') format('woff'),
-       url('fonts/raleway_thin-webfont.ttf') format('truetype'),
-       url('fonts/raleway_thin-webfont.svg') format('svg');
+  font-family: 'raleway';
   font-weight: normal;
   font-style: normal;
 }
 
 .text (@size: 1.35em) {
-  font: normal @size 'raleway-thin', monospace;
+  font: normal @size 'raleway', sans-serif;
   text-align: left;
 }
 
@@ -35,7 +33,7 @@ body {
 }
 
 #title, #content, #error_page {
-  width: 830px;
+  max-width: 830px;
 }
 
 #error_page {
@@ -47,10 +45,10 @@ html, body {
 }
 
 h1, h2 {
-  padding: 10px 0 4px 0;
+  padding: 4px 0 4px 0;
 }
 
-h1{ 
+h1 { 
   .text(300%);
   color: @text-title;
 }
@@ -81,11 +79,11 @@ a:hover {
 }
 
 #footer {
-   .text(70%);
+   .text(75%);
    position: absolute;
    bottom: 0;
-   padding: 8px 0 0 12px;
+   padding: 10px 0 0 14px;
    width: 100%;
    height: @footer-height;
-   background: darken(@background, 3%);
+   background: darken(@background, 5%);
 }
