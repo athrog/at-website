@@ -9,12 +9,14 @@ handlers:
 # No other URLs match this pattern.
 - url: /
   script: main.app
+  secure: always
 
 # Load any other resource with a given file extension.
 - url: /(.*\.(png|jpg|ico|css|less|js|woff|eot|svg|ttf))
   static_files: \1
   upload: (.*\.(gif|png|jpg|ico|css|less|js|woff|eot|svg|ttf))
-  
+  secure: always
+
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt 
@@ -22,3 +24,4 @@ handlers:
 # Catch all other invalid URLs, direct to 404 page.
 - url: /.*
   script: not_found.app
+  secure: always
